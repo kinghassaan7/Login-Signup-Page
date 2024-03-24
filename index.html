@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="/" id="form">
+        <h1 id="header">Signup Form</h1>
+        <div class="btn">
+          <button id="btn-login" class="" onclick="loginForm()">Login</button>
+          <button id="btn-signup" class="active-btn" onclick="    signupForm()">
+            Signup
+          </button>
+        </div>
+        <div class="inputs">
+          <input id="name" type="text" placeholder="Name" required />
+          <input id="email" type="email" placeholder="Email Address" required />
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <input id="password1" placeholder="Confirm Password" required />
+        </div>
+        <button id="signup" type="submit">Signup</button>
+        <div class="detail00">
+          <p>Already have an account?</p>
+          <a href="#" id="already">&nbsp;Login</a>
+        </div>
+      </form>
+    </div>
+
+    <script>
+        let form = document.getElementById("form");
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+        let cfnpassword = document.getElementById("password1");
+
+        let login = document.getElementById("btn-login");
+        let btn = document.getElementById("signup");
+        let signup = document.getElementById("btn-signup");
+        let already = document.getElementById("already");
+      function loginForm() {
+        login.className = "active-btn";
+        signup.className = "";
+        name.placeholder = "Name / Email Address";
+        email.style.display = "none";
+        cfnpassword.style.display = "none";
+        btn.innerHTML = "Login";
+        already.innerHTML = "&nbsp;Signup";
+      }
+      function signupForm() {
+        login.className = "";
+        signup.className = "active-btn";
+        name.placeholder = "Name";
+        email.style.display = "flex";
+        cfnpassword.style.display = "flex";
+        btn.innerHTML = "Signup";
+        already.innerHTML = "&nbsp;Login";
+      }
+
+      
+
+    </script>
+  </body>
+</html>
