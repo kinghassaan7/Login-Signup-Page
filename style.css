@@ -35,8 +35,8 @@ body{
 .btn{
    display:flex;
    justify-content: center;
-   margin-top: 20px;
-   margin-bottom: 30px;
+   margin-top: auto;
+   margin-bottom: auto;
    border: .1px solid rgba(0, 0, 0, 0.158); 
    border-radius: 7px;  
 }
